@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva Clone</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva Clone</title>
+
+
+
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #00ffea, #1d00ff,#00ffff,#ffa5ff);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .actions .btn {
+            background: transparent;
+            border: none;
+            padding: 8px 15px;
+            color: white;
+            border-color: #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .actions .btn:hover {
+            background: #6633bb;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 50px);
+        }
+
+        .container2 {
+            width: 400px;
+        }
+
+        .sidebar {
+            width: 150px;
+            background: #f4f4f4;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .sidebar .icon {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar1 {
+            height: 100%;
+            background: #f4f4f4;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .sidebar .icon i {
+            margin-right: 10px;
+        }
+
+        .icon {
+            width: 130px;
+            height: 60px;
+            border-radius: 10px;
+            border-color: #fff;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+        }
+
+        .template-nav {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .category-btn {
+            flex: 1;
+            padding: 8px;
+            background: white;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .category-btn:hover {
+            background: #ddd;
+        }
+
+        .templates {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .template {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-align: center;
+
+        }
+
+        .image-of-website{
+            height:150px;
+            width: 300px;
+        }
+
+        .workspace {
+            flex-grow: 1;
+            background: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .canvas {
+            width: 80%;
+            height: 80%;
+            background: white;
+            border: 2px dashed #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="menu">
+            <button class="menu-btn">☰ File</button>
+        </div>
+        <div class="title">Untitled Design - Website</div>
+        <div class="actions">
+            <button class="btn">Upgrade</button>
+            <button class="btn">Preview</button>
+            <button class="btn">Publish</button>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="icon"><i class="fas fa-layer-group"></i> Design</div>
+            <div class="icon"><i class="fas fa-shapes"></i> Elements</div>
+            <div class="icon"><i class="fas fa-font"></i> Text</div>
+            <div class="icon"><i class="fas fa-upload"></i> Uploads</div>
+            <div class="icon"><i class="fas fa-paint-brush"></i> Draw</div>
+            <div class="icon"><i class="fas fa-folder"></i> Projects</div>
+            <div class="icon" id="generate-image"><i class="fa-solid fa-wand-magic-sparkles"> </i> genarate images 
+            </div>
+
+        </aside>
+        <div class="container2">
+            <div class="sidebar1">
+                <input type="text" placeholder="Search Website templates" class="search-bar">
+                <nav class="template-nav">
+                    <button class="category-btn active">Website</button>
+                    <button class="category-btn">Portfolio</button>
+                    <button class="category-btn">Food</button>
+                    <button class="category-btn">Blog</button>
+                </nav>
+                <section class="templates">
+                    <div class="template">
+                        <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/e0414d55412070ec14fe66a17456bdc03af074b08431d6891d6a18582608fe841629730037754.jpg"
+                            alt="image not found" srcset=""class="image-of-website">
+                    </div>
+                    <div class="template">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKKaNgOEKkuzYzJ3-iLl2c23d2Wr2w2KBA7g&s"
+                            alt="image not found" srcset="" class="image-of-website">
+                    </div>
+                    <div class="template">
+                        <img src="https://www.sliderrevolution.com/wp-content/uploads/2021/11/Leverage.jpg"
+                            alt="image not found" srcset="" class="image-of-website">
+                    </div>
+                    <div class="template">
+                        <img src="https://img.freepik.com/free-psd/landing-page-template-creative-event_23-2150273639.jpg"
+                            alt="image not found" srcset=""class="image-of-website">
+                    </div>
+                    <div class="template">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOLBBE1M0ASyK9F0Md_TS3XlSrj3qdfZ1eHg&s"
+                            alt="image not found" srcset=""class="image-of-website">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <main class="workspace">
+            <div class="canvas">
+            </div>
+        </main>
+    </div>
+    <script>
+        const imageGenerator = document.getElementById("generate-image");
+        imageGenerator.addEventListener("click", function(){
+            window.location.href="https://040fa38b5eb50f9dff.gradio.live/";
+        });
+    </script>
+</body>
+
+</html>
